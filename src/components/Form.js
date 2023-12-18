@@ -43,11 +43,18 @@ export default function Form(props) {
 
   return (
     <>
-      <div className="container my-3">
+      <div
+        className="container my-3"
+        style={{ backgroundColor: props.mode === "dark" ? "grey" : "white" }}
+      >
         <h5>Convert your text into Lowercase and Uppercase</h5>
         <br />
         <div>
           <textarea
+            style={{
+              backgroundColor: props.mode === "dark" ? "grey" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
             value={text}
             onChange={handleOnChange}
             maxLength={500}
